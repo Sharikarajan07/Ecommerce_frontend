@@ -43,6 +43,25 @@ function Hero() {
       accent: "text-amber-500 font-serif",
       btnColor: "bg-gradient-to-r from-amber-600 to-rose-900 hover:from-amber-500 hover:to-rose-800 border-amber-500/20 shadow-rose-950/40",
       glowColor: "bg-amber-600/20"
+    },
+    {
+      sub: "PREMIUM OFFICE & CREATIVE COMPANIONS",
+      title: (
+        <>
+          Gifts &
+          <br />
+          Stationery
+          <span className="text-teal-400">.</span>
+        </>
+      ),
+      desc: "Handcrafted journals, professional writing pens, and soy wax candle sets. Elevate your desk setup.",
+      btnText: "Explore Gifts",
+      btnAction: () => navigate("/products", { state: { selectedCategory: "Gifts & Stationery" } }),
+      img: "https://images.unsplash.com/photo-1544816155-12df9643f363",
+      theme: "from-slate-900 via-stone-850 to-teal-950",
+      accent: "text-teal-450",
+      btnColor: "bg-gradient-to-r from-teal-600 to-slate-700 hover:from-teal-500 hover:to-slate-600 border-teal-500/20 shadow-teal-950/30",
+      glowColor: "bg-teal-500/20"
     }
   ];
 

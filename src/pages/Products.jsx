@@ -51,14 +51,14 @@ function Products() {
           </div>
         ) : isGiftsActive ? (
           <div className="text-center max-w-3xl mx-auto mb-16 animate-fadeIn">
-            <span className="text-stone-500 font-medium tracking-[0.25em] text-xs uppercase block mb-3">
+            <span className="text-stone-500 dark:text-stone-400 font-medium tracking-[0.25em] text-xs uppercase block mb-3">
               FINE WRITING & LIFESTYLE ACCENTS
             </span>
-            <h1 className="text-6xl font-sans font-extrabold text-[#37474F] dark:text-stone-250 tracking-tight mb-6">
+            <h1 className="text-6xl font-sans font-extrabold text-[#37474F] dark:text-stone-100 tracking-tight mb-6">
               Gifts & Stationery
             </h1>
-            <div className="w-24 h-[2px] bg-stone-400 mx-auto mb-6"></div>
-            <p className="text-stone-600 dark:text-stone-350 text-lg leading-relaxed italic">
+            <div className="w-24 h-[2px] bg-stone-400 dark:bg-stone-600 mx-auto mb-6"></div>
+            <p className="text-stone-600 dark:text-stone-300 text-lg leading-relaxed italic">
               "Handcrafted journals, premium writing tools, and artistic lifestyle accents. Elevate your everyday workspace and find the perfect gift."
             </p>
           </div>

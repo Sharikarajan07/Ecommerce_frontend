@@ -48,9 +48,13 @@ function Signup() {
 
     // Simulate network latency for a high-quality feel
     setTimeout(() => {
-      signup(name, email, password);
+      const res = signup(name, email, password);
       setIsLoading(false);
-      navigate("/");
+      if (res.success) {
+        navigate("/");
+      } else {
+        setError(res.message);
+      }
     }, 1200);
   };
 

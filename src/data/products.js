@@ -138,6 +138,70 @@ const products = [
     category: "Gifts & Stationery",
     image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634",
     description: "Premium heavy-weight cold-press watercolor pad, ideal for sketches, washes, and multimedia work."
+  },
+  {
+    id: 14,
+    name: "Adidas Ultraboost",
+    price: 11999,
+    category: "Shoes",
+    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
+    description: "High-performance running shoe featuring responsive boost cushioning, a breathable Primeknit upper, and durable continental rubber outsole."
+  },
+  {
+    id: 15,
+    name: "Classic Canvas Sneakers",
+    price: 2499,
+    category: "Shoes",
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77",
+    description: "Timeless low-top canvas sneakers with durable vulcanized rubber soles, breathable canvas upper, and double-stitched details."
+  },
+  {
+    id: 16,
+    name: "Air Force Premium",
+    price: 7999,
+    category: "Shoes",
+    image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d",
+    description: "Sleek all-black premium sports sneakers with a soft leather upper, air cushioning, and iconic non-slip rubber traction."
+  },
+  {
+    id: 17,
+    name: "Minimalist Leather Watch",
+    price: 4999,
+    category: "Watches",
+    image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+    description: "Elegant quartz watch featuring a genuine tan leather strap, clean white dial with silver markers, and durable mineral glass."
+  },
+  {
+    id: 18,
+    name: "Classic Chronograph",
+    price: 9999,
+    category: "Watches",
+    image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa",
+    description: "Precision luxury watch with multiple sub-dials, stainless steel casing, sapphire crystal face, and deep black finish."
+  },
+  {
+    id: 20,
+    name: "Mechanical Keyboard",
+    price: 4499,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    description: "Tactile mechanical keyboard with customized RGB backlighting, durable double-shot PBT keycaps, and linear red switches."
+  },
+  {
+    id: 21,
+    name: "Wireless Smart Speaker",
+    price: 3499,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+    description: "Compact smart speaker with 360-degree immersive sound, voice control assistant, and 12-hour continuous playback battery life."
+  },
+  {
+    id: 22,
+    name: "4K Action Camera",
+    price: 12999,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+    description: "Ultra-HD action camera with advanced electronic image stabilization, waterproof casing, and dual screens for selfies."
   }
 ];
 

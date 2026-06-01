@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaShoppingBag, FaSun, FaMoon } from "react-icons/fa";
+import { FaShoppingBag, FaSun, FaMoon, FaHeart } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 import { useTheme } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
-  const { getCartCount } = useCart();
+  const { getCartCount, wishlistItems } = useCart();
   const { isDarkMode, toggleTheme } = useTheme();
   const { user, logout } = useAuth();
   const cartCount = getCartCount();
@@ -28,13 +28,22 @@ function Navbar() {
         <div className="flex items-center gap-6">
           <button 
             onClick={toggleTheme} 
-            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none transform active:scale-95 duration-200"
+            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none transform active:scale-95 duration-200 cursor-pointer"
             aria-label="Toggle Theme"
           >
             {isDarkMode ? <FaSun size={20} className="text-amber-400" /> : <FaMoon size={20} className="text-slate-600" />}
           </button>
 
-          <Link to="/cart" className="relative hover:text-blue-600 dark:hover:text-blue-400 transition-colors mr-1">
+          <Link to="/wishlist" className="relative hover:text-blue-600 dark:hover:text-blue-400 transition-colors mr-1" aria-label="Wishlist">
+            <FaHeart size={20} />
+            {wishlistItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-rose-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                {wishlistItems.length}
+              </span>
+            )}
+          </Link>
+
+          <Link to="/cart" className="relative hover:text-blue-600 dark:hover:text-blue-400 transition-colors mr-1" aria-label="Cart">
             <FaShoppingBag size={22} />
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">

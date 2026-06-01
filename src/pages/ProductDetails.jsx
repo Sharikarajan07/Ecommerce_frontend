@@ -3,11 +3,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import products from "../data/products";
 import { useCart } from "../context/CartContext";
-import { FaChevronLeft, FaWineGlass, FaTshirt, FaCompass, FaHeart } from "react-icons/fa";
+import { FaChevronLeft, FaWineGlass, FaTshirt, FaCompass, FaHeart, FaRegHeart } from "react-icons/fa";
 
 function ProductDetails() {
   const { id } = useParams();
-  const { addToCart } = useCart();
+  const { addToCart, toggleWishlist, isInWishlist } = useCart();
 
   const product = products.find(
     (p) => p.id === Number(id)
@@ -124,8 +124,12 @@ function ProductDetails() {
                   >
                     Add To Cart Boutique
                   </button>
-                  <button className="p-4 border border-stone-300 dark:border-stone-700 rounded-xl text-stone-500 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50/30 dark:hover:bg-red-950/20 transition-colors">
-                    <FaHeart size={20} />
+                  <button 
+                    onClick={() => toggleWishlist(product)}
+                    className="p-4 border border-stone-300 dark:border-stone-700 rounded-xl text-stone-500 dark:text-stone-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50/30 dark:hover:bg-rose-950/20 transition-colors cursor-pointer"
+                    aria-label="Add to Wishlist"
+                  >
+                    {isInWishlist(product.id) ? <FaHeart size={20} className="text-rose-600 dark:text-rose-400" /> : <FaRegHeart size={20} />}
                   </button>
                 </div>
                 <div className="text-center">
@@ -173,8 +177,12 @@ function ProductDetails() {
                 >
                   Add To Cart
                 </button>
-                <button className="p-4 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-400 dark:text-slate-500 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50/50 dark:hover:bg-red-950/20 transition-colors">
-                  <FaHeart size={20} />
+                <button 
+                  onClick={() => toggleWishlist(product)}
+                  className="p-4 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-400 dark:text-slate-500 hover:text-rose-500 dark:hover:text-rose-400 hover:bg-rose-50/50 dark:hover:bg-rose-950/20 transition-colors cursor-pointer"
+                  aria-label="Add to Wishlist"
+                >
+                  {isInWishlist(product.id) ? <FaHeart size={20} className="text-rose-600 dark:text-rose-400" /> : <FaRegHeart size={20} />}
                 </button>
               </div>
             </div>

@@ -38,12 +38,13 @@ function Login() {
 
     // Simulate network delay for a premium experience
     setTimeout(() => {
-      // Mock name extraction
-      const name = email.split("@")[0];
-      const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
-      login(email, password, capitalizedName);
+      const res = login(email, password);
       setIsLoading(false);
-      navigate("/");
+      if (res.success) {
+        navigate("/");
+      } else {
+        setError(res.message);
+      }
     }, 1200);
   };
 
